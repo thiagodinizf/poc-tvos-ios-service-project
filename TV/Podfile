@@ -1,0 +1,35 @@
+workspace 'TV'
+inhibit_all_warnings!
+version = '10.0'
+platform :tvos, version
+
+def default_pods
+  pod 'Kingfisher'
+  pod 'Moya'
+end
+
+target 'TV' do
+  use_frameworks!
+  default_pods
+end
+
+target 'TVUITests' do
+  inherit! :search_paths
+end
+
+target 'TVTests' do
+  inherit! :search_paths
+end
+
+target 'Services' do
+  use_frameworks!
+  project '../Services/Services.xcodeproj'
+  default_pods
+end
+
+target 'ServicesTV' do
+  platform :tvos, version
+  use_frameworks!
+  project '../Services/Services.xcodeproj'
+  default_pods
+end

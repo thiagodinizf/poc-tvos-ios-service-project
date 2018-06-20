@@ -1,0 +1,35 @@
+workspace 'Mobile'
+inhibit_all_warnings!
+version = '10.0'
+platform :ios, version
+
+def default_pods
+  pod 'Kingfisher'
+  pod 'Moya'
+end
+
+target 'Mobile' do
+  use_frameworks!
+  default_pods
+end
+
+target 'MobileUITests' do
+  inherit! :search_paths
+end
+
+target 'MobileTests' do
+  inherit! :search_paths
+end
+
+target 'Services' do
+  use_frameworks!
+  project '../Services/Services.xcodeproj'
+  default_pods
+end
+
+target 'ServicesTV' do
+  platform :tvos, version
+  use_frameworks!
+  project '../Services/Services.xcodeproj'
+  default_pods
+end
