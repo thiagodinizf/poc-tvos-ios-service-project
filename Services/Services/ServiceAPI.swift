@@ -8,17 +8,39 @@
 
 import Foundation
 import Moya
+import Moya_ModelMapper
+import RxSwift
 
 public class ServicesAPI {
     
-    public init() {}
+    let provider = MoyaProvider<MyProvider>()
     
-    public func printDebug() {
+    public init() {
         
+    }
+    
+    public func getUser(value: String) -> Observable<String> {
+        return provider.rx
+            .request(.getUser(user: value))
+            .debug()
+            
+            .map({ (event) -> String in
+                do {
+                    let response = try event.filterSuccessfulStatusAndRedirectCodes()
+                    let user = try response.map(to: User.self)
+                    return "\(user.userName) on \(self.platform())"
+                } catch {
+                    return event.description
+                }
+            })
+            .asObservable()
+    }
+    
+    private func platform() -> String {
         #if os(iOS)
-            print("iOS")
+        return "iOS"
         #elseif os(tvOS)
-            print("tvOS")
+        return "tvOS"
         #endif
     }
 }

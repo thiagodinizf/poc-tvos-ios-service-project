@@ -8,13 +8,32 @@
 
 import UIKit
 import Services
+import RxSwift
 
 class ViewController: UIViewController {
 
+    let bag = DisposeBag()
+    @IBOutlet weak var userTextField: UITextField!
+    
+    let services = ServicesAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let services = ServicesAPI()
-        services.printDebug()
+    }
+    
+    @IBAction func show(_ sender: Any) {
+        services.getUser(value: userTextField.text ?? "")
+            .subscribe(onNext: { result in
+                self.createAlert(userName: result)
+            })
+            .disposed(by: bag)
+    }
+    
+    func createAlert(userName: String) {
+        let alert = UIAlertController(title: "Name", message: userName, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 
