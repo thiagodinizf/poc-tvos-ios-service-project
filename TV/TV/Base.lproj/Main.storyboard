@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRO-Wv-3NK">
-                                        <rect key="frame" x="20" y="433" width="1700" height="70"/>
+                                        <rect key="frame" x="20" y="275" width="1700" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Lqm-iT-gc3"/>
                                         </constraints>
@@ -41,7 +41,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8H-OY-cEs">
-                                        <rect key="frame" x="745" y="890" width="251" height="70"/>
+                                        <rect key="frame" x="745" y="575" width="251" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="TDQ-nj-LQ5"/>
                                         </constraints>
@@ -49,6 +49,14 @@
                                         <state key="normal" title="Get Name"/>
                                         <connections>
                                             <action selector="show:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="750-JY-bZX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1B-nF-edp">
+                                        <rect key="frame" x="697" y="874" width="347" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Play Something"/>
+                                        <connections>
+                                            <segue destination="1rd-Ce-XsM" kind="show" identifier="player" id="cjQ-cJ-Vj7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -73,6 +81,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="7IP-pL-mHQ">
+            <objects>
+                <viewController id="1rd-Ce-XsM" customClass="PlayerViewController" customModule="TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a5H-f2-LL6"/>
+                        <viewControllerLayoutGuide type="bottom" id="TmZ-QQ-tLb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YCG-SQ-3zw">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v8C-P1-RB7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wa9-V7-VAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2552" y="69"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,7 @@ def default_pods
   pod 'Moya/RxSwift'
   pod 'Moya-ModelMapper/RxSwift'
   pod 'RxCocoa'
+  pod 'BitmovinPlayer', git: 'https://github.com/bitmovin/bitmovin-player-ios-sdk-cocoapod.git', tag: '2.8.0'
 end
 
 target 'TV' do
