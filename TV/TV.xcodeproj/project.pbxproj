@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37255A92B723B62A3D24A163 /* libPods-TVTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A76400A1A8F287D42AED5860 /* libPods-TVTests.a */; };
-		471636CD20D93DF300A8D5E1 /* ServicesTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471636CC20D93DF300A8D5E1 /* ServicesTV.framework */; };
 		4748EDCC20D83D4B00BD24CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748EDCB20D83D4B00BD24CB /* AppDelegate.swift */; };
 		4748EDCE20D83D4B00BD24CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748EDCD20D83D4B00BD24CB /* ViewController.swift */; };
 		4748EDD120D83D4B00BD24CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4748EDCF20D83D4B00BD24CB /* Main.storyboard */; };
@@ -16,6 +15,7 @@
 		4748EDDE20D83D4D00BD24CB /* TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748EDDD20D83D4D00BD24CB /* TVTests.swift */; };
 		4748EDE920D83D4D00BD24CB /* TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748EDE820D83D4D00BD24CB /* TVUITests.swift */; };
 		47F223B720E556DF00321CDC /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F223B620E556DF00321CDC /* PlayerViewController.swift */; };
+		47F223B920E6763000321CDC /* ServicesTV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 471636CC20D93DF300A8D5E1 /* ServicesTV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97B6820D4A5E95D08A275AD0 /* Pods_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23259F6555E0B252D8CAF199 /* Pods_TV.framework */; };
 		E1F49839BC2C0659A0D7AAA3 /* libPods-TVUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D18BF66DB263CF4FCA8A1668 /* libPods-TVUITests.a */; };
 /* End PBXBuildFile section */
@@ -36,6 +36,20 @@
 			remoteInfo = TV;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		47F223BA20E6763000321CDC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				47F223B920E6763000321CDC /* ServicesTV.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B845B8267B0C4CE25E5276C /* Pods-TVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVTests/Pods-TVTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471636CD20D93DF300A8D5E1 /* ServicesTV.framework in Frameworks */,
 				97B6820D4A5E95D08A275AD0 /* Pods_TV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +196,7 @@
 				4748EDC520D83D4B00BD24CB /* Frameworks */,
 				4748EDC620D83D4B00BD24CB /* Resources */,
 				ADBA39108E0D31703AEC4B0E /* [CP] Embed Pods Frameworks */,
+				47F223BA20E6763000321CDC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -566,12 +580,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9BE6U25RP;
 				INFOPLIST_FILE = TV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiagodiniz.TV;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiagodiniz.TV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -586,12 +601,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9BE6U25RP;
 				INFOPLIST_FILE = TV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiagodiniz.TV;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiagodiniz.TV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
